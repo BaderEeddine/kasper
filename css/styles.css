@@ -66,7 +66,7 @@ header .container::after {
   background-color: #a2a2a2;
 }
 header .logo img {
-  height: 100px;
+  height: 110px;
 }
 header nav {
   flex: 1;
@@ -165,6 +165,17 @@ header .form i {
 .landing .content {
   max-width: 500px;
 } 
+@media (max-width: 768px) {
+  .landing .text {
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+  }
+  .landing .content {
+    max-width: 100%;
+    text-align: center;
+  }
+}
 .landing .content h2 {
   font-size: 32px;
   font-weight: normal;
@@ -175,4 +186,45 @@ header .form i {
   font-size: 14px;
   line-height: 2;
 }
-/* end Landing */
+.landing .change-background {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .landing .change-background {
+    display: none;
+  }
+}
+.landing .change-background:hover {
+  color: var(--main-color);
+}
+.landing .fa-angle-left {
+  left: 20px;
+}
+.landing .fa-angle-right {
+  right: 20px;
+}
+.landing .bullets {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.landing .bullets li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+.landing .bullets li.active {
+  background-color: var(--main-color);
+}
+/* end Landing */ 
