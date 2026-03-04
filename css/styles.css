@@ -317,3 +317,33 @@ header .form i {
   line-height: 2;
 }
 /* end Services */
+/* Start Design */
+.design {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url(../img/fabrizio-conti-kXVogATbFgA-unsplash.jpg);
+  background-size: cover;
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.design .img {
+}
+.design .img img {
+  width: 513px;
+}
+.design .text {
+  color: white;
+  background-color: var(--main-color);
+  padding: 50px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 600px;
+}
+/* end Design */
+/* background-color: rgb(0 0 0 / 60%); */
