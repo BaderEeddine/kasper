@@ -1,13 +1,14 @@
+:root {
+  --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
+}
+/* Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-:root {
-  --main-color: #19c8fa;
-  --transparent-color: rgb(15 116 143 / 70%);
 }
 html {
   scroll-behavior: smooth;
@@ -42,6 +43,51 @@ ul {
     width: 1170px;
   }
 }
+/* end Global Rules */
+/* Start Components */
+.main-heading {
+  text-align: center;
+  margin: 50px 0;
+  background-color: white;
+  padding: 20px;
+  color: black;
+}
+.main-heading h2 {
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+.main-heading h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #333;
+  bottom: -150px;
+  width: 120px;
+}
+.main-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -158px;
+  width: 14px;
+  height: 14px;
+  transform: translateX(-50%);
+  border: solid 2px black;
+  border-radius: 50%;
+}
+.main-heading p {
+  font-size: 14px;
+  line-height: 2;
+  color: #777;
+  width: 500px;
+  max-width: 100%;
+  margin: auto;
+}
+/* end Components */
 /* start header */
 header {
   position: absolute;
@@ -212,7 +258,7 @@ header .form i {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
+  width: 50px;
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -228,3 +274,6 @@ header .form i {
   background-color: var(--main-color);
 }
 /* end Landing */ 
+/* Start Services */
+
+/* end Services */
