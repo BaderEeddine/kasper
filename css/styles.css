@@ -58,6 +58,7 @@ ul {
   font-weight: normal;
   margin-bottom: 70px;
   text-transform: uppercase;
+  position: relative;
 }
 .main-heading h2::before {
   content: "";
@@ -66,14 +67,14 @@ ul {
   transform: translateX(-50%);
   height: 2px;
   background-color: #333;
-  bottom: -245px;
+  bottom: -35px;
   width: 120px;
 }
 .main-heading h2::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -253px;
+  bottom: -43px;
   width: 14px;
   height: 14px;
   transform: translateX(-50%);
@@ -113,7 +114,7 @@ header .container::after {
   background-color: #a2a2a2;
 }
 header .logo img {
-  height: 110px;
+  height: 70px;
 }
 header nav {
   flex: 1;
@@ -338,7 +339,7 @@ header .form i {
   height: 100%;
   background-color: rgb(0 0 0 / 60%);
 }
-.design .img,
+.design .image,
 .design .text {
   position: relative;
   z-index: 2;
@@ -349,15 +350,15 @@ header .form i {
   background-color: var(--transparent-color);
   padding: 50px;
 }
-.design .img {
+.design .image {
   text-align: center;
 }
-@media (max-width: 767px) {
-  .design .img {
+@media (max-width: 768px) {
+  .design .image {
     display: none;
   }
 }
-.design .img img {
+.design .image img {
   position: absolute;
   width: 500px;
   bottom: -550px;
@@ -378,3 +379,85 @@ header .form i {
   margin-right: 20px;
 }
 /* end Design */
+/* Start Portfolio  */
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  position: relative;
+}
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.portfolio .shuffle li {
+  margin-right: 20px;
+  padding: 10px;
+}
+.portfolio .shuffle li:hover {
+  background-color: var(--main-color);
+}
+.portfolio .shuffle li.active {
+  background-color: var(--main-color);
+}
+.portfolio .images-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+justify-content: center
+}
+.portfolio .box {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio .box:hover .caption {
+  bottom: 0;
+}
+.portfolio .box:hover img {
+  transition: 0.3s;
+  transform: rotate(3deg) scale(1.1);
+}
+@media (min-width: 768px) {
+  .portfolio .box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1199px) {
+  .portfolio .box {
+    flex-basis: 25%;
+  }
+}
+.portfolio .box img {
+  max-width: 100%;
+}
+.portfolio .box .caption {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  transition: 0.3s;
+}
+.portfolio .box .caption h4 {
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+.portfolio .box .caption p {
+  color: var(--main-color);
+}
+.portfolio .more {
+  padding: 15px 20px;
+  background-color: var(--main-color);
+  color: white;
+  text-decoration: none;
+  width: fit-content;
+  display: block;
+  margin: 30px auto;
+  text-transform: uppercase;
+  
+}
+/* end Portfolio  */
