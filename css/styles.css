@@ -652,4 +652,59 @@ header .form i {
     margin: 0 0 30px;
   }
 }
+.skills .bullets {
+  margin: auto;
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.skills .bullets li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+.skills .bullets li.active {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+.skills .container .prog-holder {
+  margin-bottom: 40px;
+}
+.skills .container .prog-holder .prog {
+  background-color: #dedadc;
+  height: 30px;
+}
+.skills .container .prog-holder h4 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.skills .container .prog-holder .prog span {
+  display: block;
+  background-color: var(--main-color);
+  height: 100%;
+  position: relative;
+
+}
+.skills .container .prog-holder .prog span::before {
+  content: attr(data-progress);
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: -50px;
+  right: -26px;
+  padding: 5px 8px;
+  border-radius: 7px;
+}
+.skills .container .prog-holder .prog span::after {
+  content: "";
+  border-style: solid;
+  border-width: 8px;
+  border-color: black transparent transparent;
+  position: absolute;
+  top: -18px;
+  right: -7px;
+}
 /* End Skills */
